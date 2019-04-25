@@ -1,3 +1,4 @@
 class Tag < ApplicationRecord
-    has_many :tag_gossips
+    belongs_to :tag_gossips, required: false
+    has_many :gossips, through: :tag_gossips
 end
